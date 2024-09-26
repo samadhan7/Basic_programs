@@ -1,0 +1,423 @@
+// Online C# Editor for free
+// Write, Edit and Run your C# code using C# Online Compiler
+
+using System;
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        Console.WriteLine ("Enter string :");
+        string str = Console.ReadLine();
+        char[] strr= str.ToCharArray();
+        
+        for(int i=0;i<=strr.Length - 1;i++){
+            if(char.IsUpper(strr[i])){
+                strr[i] = char.ToLower(strr[i]);
+            }else if(char.IsLower(strr[i])){
+                strr[i] = char.ToUpper(strr[i]);
+            }
+        }
+        
+        for(int i=0;i<=strr.Length - 1;i++){
+            Console.Write(strr[i]);
+        }
+
+        
+    }
+}
+
+
+
+// Online C# Editor for free
+// Write, Edit and Run your C# code using C# Online Compiler
+
+using System;
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        Console.WriteLine ("Enter string :");
+        string str = Console.ReadLine();
+        
+        char[] strr= str.ToCharArray();
+        
+        int sum = 0;
+        
+        for(int i=0;i <= strr.Length -1;i++)
+        {
+            if(char.IsDigit(strr[i]))
+            {
+                 sum += strr[i] - '0';
+            }
+        }
+        
+        Console.Write(sum);
+    }
+}
+
+
+// Online C# Editor for free
+// Write, Edit and Run your C# code using C# Online Compiler
+
+using System;
+
+using System;
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        Console.WriteLine("Enter string:");
+        string str = Console.ReadLine();
+        
+        char[] strr = str.ToCharArray();
+        Array.Reverse(strr);
+        string s = new string(strr);
+        
+        if (str.Equals(s, StringComparison.OrdinalIgnoreCase)) // Use case-insensitive comparison
+        {
+            Console.WriteLine("palindrome");
+        }
+        else
+        {
+            Console.WriteLine("not palindrome");
+        }
+    }
+}
+
+// Online C# Editor for free
+// Write, Edit and Run your C# code using C# Online Compiler
+
+using System;
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        Console.WriteLine ("Enter string :");
+        string str =Console.ReadLine();
+        
+        string s="(";
+        string s2=")";
+        if(str.Contains(s) || str.Contains(s2)){
+            str = str.Replace(s,"");
+            str = str.Replace(s2,"");
+        }
+
+        
+        Console.Write (str);
+        
+    }
+}
+
+
+using System;
+using System.Collections.Generic;
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        Console.WriteLine("Enter a string:");
+        string str = Console.ReadLine();
+        
+        // Create a dictionary to store the frequency of each character
+        Dictionary<char, int> frequencyDict = new Dictionary<char, int>();
+        
+        // Loop through each character in the string
+        foreach (char c in str)
+        {
+            // If the character is already in the dictionary, increment its value
+            if (frequencyDict.ContainsKey(c))
+            {
+                frequencyDict[c]++;
+            }
+            // If the character is not in the dictionary, add it with a value of 1
+            else
+            {
+                frequencyDict[c] = 1;
+            }
+        }
+        
+        // Output the frequency of each character
+        foreach (KeyValuePair<char, int> entry in frequencyDict)
+        {
+            Console.WriteLine($"The frequency of {entry.Key} is {entry.Value}");
+        }
+    }
+}
+
+
+// Online C# Editor for free
+// Write, Edit and Run your C# code using C# Online Compiler
+
+using System;
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+            Console.WriteLine("Enter a size of 1st array:");
+            int size1 = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter a size of 2nd array:");
+            int size2 = int.Parse(Console.ReadLine());
+            
+            string[] arr1= new string[size1];
+            string[] arr2= new string[size2];
+            
+              for(int i=0;i<=arr1.Length - 1;i++){
+                Console.WriteLine($"Enter 1st array {i + 1} element:");
+                 arr1[i] = Console.ReadLine();
+            }
+            for(int i=0;i<=arr2.Length - 1;i++){
+                Console.WriteLine($"Enter 2nd array {i + 1} element:",i);
+                 arr2[i] = Console.ReadLine();
+            }
+        Array.Sort(arr1);
+        Array.Sort(arr2);
+        
+        bool areSame = true;
+        for (int i = 0; i < arr1.Length; i++)
+        {
+            if (arr1[i] != arr2[i])
+            {
+                areSame = false;
+                break;
+            }
+        }
+
+            
+            Console.Write(areSame);
+            
+       
+    }
+}
+
+
+
+// Online C# Editor for free
+// Write, Edit and Run your C# code using C# Online Compiler
+
+using System;
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+            Console.WriteLine("Enter a size of array:");
+            int size1 = int.Parse(Console.ReadLine());
+
+            
+            int[] arr1= new int[size1];
+            
+        for(int i=0;i<=arr1.Length - 1;i++){
+            Console.WriteLine($"Enter 1st array {i + 1} element:");
+            arr1[i] = int.Parse(Console.ReadLine());
+        }
+        
+        string res = "Odd";
+        for(int i=0;i<=arr1.Length - 1;i++){
+            
+             if(arr1[i]%2==0){
+                 res = "even";
+             } 
+        }  
+            Console.Write(res);
+    }
+}
+
+
+
+// Online C# Editor for free
+// Write, Edit and Run your C# code using C# Online Compiler
+
+using System;
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+            Console.WriteLine("Enter a size of array:");
+            int size1 = int.Parse(Console.ReadLine());
+            int[] arr1= new int[size1];
+            
+        for(int i=0;i<=arr1.Length - 1;i++){
+            Console.WriteLine($"Enter array {i + 1} element:");
+            arr1[i] = int.Parse(Console.ReadLine());
+        }
+        int oddcount=0;
+        int evencount=0;
+        
+        foreach(int i in arr1){
+            if(i%2==0){
+                evencount++;
+            }else{
+                oddcount++;
+            }
+        }
+        Console.WriteLine ("Number of even elements: "+evencount);
+        Console.WriteLine ("Number of odd elements: "+oddcount);
+    }
+}
+
+
+
+// Online C# Editor for free
+// Write, Edit and Run your C# code using C# Online Compiler
+
+using System;
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        Console.WriteLine("Enter size of array :");
+        int size1 = int.Parse(Console.ReadLine());
+        int[] arr = new int[size1];
+        
+        
+        
+        for(int i=0;i<=arr.Length - 1;i++){
+            Console.WriteLine($"Enter array {i + 1} element:");
+            arr[i] = int.Parse(Console.ReadLine());
+        }
+        int max=arr[0];
+        int min=arr[0];
+        
+       for (int i=0; i<=arr.Length-1; i++)
+         {
+             if(arr[i] > max)
+             {
+                        max = arr[i];
+             }
+             if(arr[i] < min)
+             {
+                        min = arr[i];
+             }
+        }
+       
+            Console.WriteLine ("min : {0} max : {1}",min,max);
+    }
+}
+
+
+// Online C# Editor for free
+// Write, Edit and Run your C# code using C# Online Compiler
+
+using System;
+using System.Linq;
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        Console.WriteLine ("Enter size of array:");
+        int size1 = int.Parse(Console.ReadLine());
+        int[] arr = new int[size1];
+        
+        for(int i=0;i<=arr.Length - 1;i++){
+            Console.WriteLine($"Enter array {i + 1} element:");
+            arr[i] = int.Parse(Console.ReadLine());
+        }        
+        foreach(int i in arr.Distinct().ToArray()){
+            
+            Console.WriteLine (i);
+        }
+
+    }
+}
+
+
+// Online C# Editor for free
+// Write, Edit and Run your C# code using C# Online Compiler
+
+using System;
+using System.Linq;
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        int[] arr = new int[3];
+        int[] arr2 = new int[3];
+        int[] arr3 = new int[3];
+        
+        for(int i=0;i<=arr.Length - 1;i++){
+            Console.WriteLine($"Enter array {i + 1} element:");
+            arr[i] = int.Parse(Console.ReadLine());
+        }
+        
+        for(int i=0;i<=arr2.Length - 1;i++){
+            Console.WriteLine($"Enter 2nd array {i + 1} element:");
+            arr2[i] = int.Parse(Console.ReadLine());
+        }
+        
+        for(int i=0;i<=arr.Length - 1;i++){
+            arr3[i] = arr[i]*arr2[i];
+        }
+        
+        int result=0;
+
+        for(int i=0;i<=arr3.Length - 1;i++){
+             result += arr3[i];
+        }
+        
+        Console.WriteLine(result);
+        
+    }
+}
+
+
+// Online C# Editor for free
+// Write, Edit and Run your C# code using C# Online Compiler
+
+using System;
+using System.Collections.Generic;
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+         string[] arr = new string[3];
+        HashSet<string> hs=new HashSet<string>();
+        
+        for(int i=0;i<=arr.Length - 1;i++){
+            Console.WriteLine($"Enter array {i + 1} element:");
+            arr[i] = Console.ReadLine();
+        }
+        
+        foreach(string i in arr){
+            try{
+            hs.Add(i);
+                
+            }catch{
+                throw new ArgumentException("not inserting");
+            }
+        }
+        
+        foreach(string i in hs){
+             Console.WriteLine(i);
+        }
+
+    }
+}
+
+
+// Online C# Editor for free
+// Write, Edit and Run your C# code using C# Online Compiler
+
+using System;
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        int[] arr = { 1, -2, -3, 0, 7, -8, -2 };
+        
+        for(int i=arr.Length-1;i>=0;i--){
+            Console.WriteLine(arr[i]);
+        }
+    }
+}
